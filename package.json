@@ -1,0 +1,27 @@
+{
+  "name": "andrey-kor",
+  "version": "1.0.0",
+  "description": "own site",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start  --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Andrey Korneev <andie.kor@yandex.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "react-router-dom": "^6.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20"
+  }
+}

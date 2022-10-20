@@ -1,0 +1,82 @@
+@import url('./reset.css');
+@import url('./ErrorPage.css');
+@import url('./AboutPage.css');
+
+
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../fonts/onest/OnestRegular1602-hint.eot');
+    src: local('☺'), url('../fonts/onest/OnestRegular1602-hint.woff') format('woff'), 
+        url('../fonts/onest/OnestRegular1602-hint.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Onest';
+	src: url('../fonts/onest/OnestBold1602-hint.eot');
+	src: local('☺'), url('../fonts/onest/OnestBold1602-hint.woff') format('woff'), 
+        url('../fonts/onest/OnestBold1602-hint.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.content{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Onest', sans-serif;
+    font-size: 16px;
+    color: #2B2B2B;
+}
+
+.content__body{
+    margin: 30px 0 0 0;
+}
+
+.text{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-indent: 30px;
+    margin-bottom: 10px;
+}
+
+.media-link{
+    display: inline-block;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #29B740;
+    padding: 0 15px;
+    margin: 0 22px 10px 0;
+    font-size: 14px;
+    line-height: 35px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    transition: .2s;
+}
+
+.media-link:hover{
+    box-shadow: none;
+    filter: brightness(105%);
+    cursor: pointer;
+}
+
+.media-link_pink{
+    background-color: #F56969;
+}
+
+.media-link_green{
+    background-color: #29B740;
+}
+
+.media-link_blue{
+    background-color: #5C59F5;
+}
+
+.media-link_purple{
+    background-color: #ad75f5;
+}

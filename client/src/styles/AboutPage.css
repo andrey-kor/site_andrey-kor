@@ -1,0 +1,147 @@
+.about-title-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.media-links-about__wrapper{
+    margin: 0 0 0 60px;
+    flex: 1 1;
+}
+
+.about-intro__wrapper{
+    margin: 45px 0 40px 0;
+    display: flex;
+    max-width: 900px;
+}
+
+.about-intro__column{
+    align-self: center;
+}
+
+.about-intro__img-wrapper{
+    width: 200px;
+    height: 200px;
+    background: url('../img/about/author.png');
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.about-intro__text-wrapper{
+    padding: 0 0 0 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.about-intro__text{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.slider-holder{
+    margin: 45px 0;
+}
+
+.steps-gallery__holder{
+    margin: 50px 0;
+}
+
+.about-page__finding-block{
+    margin: 58px 0 0 0;
+    padding: 40px 41px 50px;
+    border-radius: 30px;
+    background-color: #68a3fb59;
+}
+
+.finding__title{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: auto;
+    color: #181E4B;
+    margin: 0;
+}
+
+.finding-content{
+    margin: 25px 0 0 0;
+}
+
+.finding-content table tr{
+    height: 44px;
+    padding: 10px 0;
+    border: 1px solid #000;
+}
+
+.finding__icon{
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+}
+
+.finding-content table tr:nth-child(1) td:nth-child(1){
+    background-image: url('../img/about/about-page__icons/1.png');
+}
+.finding-content table tr:nth-child(2) td:nth-child(1){
+    background-image: url('../img/about/about-page__icons/2.png');
+}
+.finding-content table tr:nth-child(3) td:nth-child(1){
+    background-image: url('../img/about/about-page__icons/3.png');
+}
+.finding-content table tr:nth-child(4) td:nth-child(1){
+    background-image: url('../img/about/about-page__icons/4.png');
+}
+
+.finding__icon{
+    width: 30px;
+}
+
+.finding__text{
+    padding: 0 0 0 15px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+@media (max-width: 768px){
+    .about-title-wrapper{
+        margin: 30px 0 -10px 0;
+    }
+    .media-links__wrapper{
+        margin: 0 0 0 20px;
+    }
+    .about-intro__text{
+        font-size: 20px;
+    }
+    .about-intro__text-wrapper{
+        padding: 0 0 0 20px;
+    }
+}
+
+@media (max-width: 500px){
+    .about-title-wrapper{
+        flex-direction: column;
+        align-items: start;
+    }
+    .media-links-about__wrapper{
+        justify-content: start;
+        margin: 20px 0 0 0;
+    }
+    .about-intro__wrapper{
+        flex-direction: column;
+    }
+    .about-intro__text-wrapper{
+        margin: 20px 0 0 0;
+        padding: 0;
+    }
+    .about-intro__text{
+        text-align: right;
+        font-size: 18px;
+    }
+    .steps-gallery__holder{
+        margin: 20px 0;
+    }
+    .finding__title{
+        font-size: 20px;
+    }
+    .finding__text{
+        font-size: 16px;
+    }
+}
