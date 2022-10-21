@@ -1,6 +1,7 @@
 .little-slider{
     position: relative;
     overflow: hidden;
+    padding: 20px 0;
 }
 
 .slider__ribbon{
@@ -89,7 +90,7 @@
 
 .slider-points__wrapper{
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     left: calc(50% - 46px);
     display: flex;
     justify-content: center;
