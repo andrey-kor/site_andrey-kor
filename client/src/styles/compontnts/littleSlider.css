@@ -1,4 +1,4 @@
-.little-slider{
+.slider{
     position: relative;
     overflow: hidden;
     padding: 20px 0;
@@ -50,7 +50,7 @@
     font-size: 20px;
 }
 
-.little-slider__arrow-holder{
+.slider__arrow-holder{
     position: absolute;
     top: calc(50% - 35px);
     left: 0;
@@ -60,7 +60,7 @@
     z-index: 1;
 }
 
-.little-slider__arrow-holder > div{
+.slider__arrow-holder > div{
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
@@ -68,23 +68,23 @@
     margin-left: 10px;
 }
 
-.little-slider__arrow-holder:hover > div{
+.slider__arrow-holder:hover > div{
     cursor: pointer;
 }
 
-.little-slider__arrow-left{
+.slider__arrow-left{
     background-image: url('../../img/slider/arrow-left.png');
 }
 
-.little-slider__arrow-right{
+.slider__arrow-right{
     background-image: url('../../img/slider/arrow-right.png');
 }
 
-.little-slider__arrow_inactive{
+.slider__arrow_inactive{
     opacity: 40%;
 }
 
-.little-slider__arrow_inactive:hover{
+.slider__arrow_inactive:hover{
     cursor: default !important;
 }
 
@@ -132,7 +132,7 @@
         margin: 25px 0 0 0;
         font-size: 18px;
     }
-    .little-slider__arrow-holder > div {
+    .slider__arrow-holder > div {
         width: 50px;
         top: calc(50% - 25px);
     }
@@ -151,7 +151,7 @@
     .little-slide{
         padding: 30px 45px 50px;
     }
-    .little-slider__arrow-holder > div{
+    .slider__arrow-holder > div{
         width: 40px;
         height: 40px;
     }

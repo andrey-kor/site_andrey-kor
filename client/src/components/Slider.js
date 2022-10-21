@@ -4,17 +4,17 @@ import { SlidesRibbon } from './SlidesRibbon'
 import { SliderPoints } from './SliderPoints'
 import '../styles/compontnts/littleSlider.css'
 
-export const LittleSlider = (props) => {
+export const Slider = (props) => {
     const [slide, setSlide] = useState(0)
 
     const swipeSlideHandler = event => {
         const targetClassList = event.target.classList
         let direction = 0
 
-        if (targetClassList.contains('little-slider__arrow-right')) {
+        if (targetClassList.contains('slider__arrow-right')) {
             direction = 1
         } 
-        else if (targetClassList.contains('little-slider__arrow-left')) {
+        else if (targetClassList.contains('slider__arrow-left')) {
             direction = -1
         }
         
@@ -36,10 +36,11 @@ export const LittleSlider = (props) => {
     }
 
     return (    
-        <div className="little-slider">
+        <div className="slider">
             <SlidesRibbon 
                 slides={ props.slides }
                 slideNum={ slide } 
+                targetSlider={ props.targetSlider }
             />
             <SliderArrows 
                 changeSlide={ swipeSlideHandler }

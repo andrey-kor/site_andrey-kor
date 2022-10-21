@@ -1,5 +1,5 @@
 import React from 'react'
-import { LittleSlider } from '../components/LittleSlider'
+import { Slider } from '../components/Slider'
 import { StepsGallery } from '../components/StepsGallery'
 import { useScroll } from '../hooks/scroll.hook'
 import sliderAboutData from '../data/sliderAboutPage.json'
@@ -11,7 +11,6 @@ export const AboutPage = () => {
   return (
     <div className="content-wrapper">
         <div className="content">
-            <div className="header-holder"></div>
             <div className="content__body">
                 <div className="about-title-wrapper">
                     <h1 className="main-title">ОБО МНЕ</h1>
@@ -53,8 +52,9 @@ export const AboutPage = () => {
                     Вот несколько примеров моих последних работ.
                 </p>
         
-                <LittleSlider 
+                <Slider 
                     slides={sliderAboutData} 
+                    targetSlider={'little'}
                 />
         
                 <p className="text">

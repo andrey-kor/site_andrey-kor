@@ -1,16 +1,15 @@
 import React from 'react'
 import importedImages from '../lib/helpers/importImages.js'
 
-
-export const LittleSlide = (props) => {
-    const slide = props.slide
+export const LittleSlide = ({ slide }) => {
 
     return (
         <div className="little-slide">
             <div className="little-slide__image-wrapper">
                 <img 
                     src={importedImages[slide.images[0].image]}
-                    alt={slide.images[0].alt} />
+                    alt={slide.images[0].alt} 
+                />
             </div>
             <div className="little-slide__content-wrapper">
                 <div className="little-slide__title">
