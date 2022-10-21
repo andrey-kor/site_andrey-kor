@@ -7,7 +7,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className="background">
         {routes}
       </div>
     </Router>

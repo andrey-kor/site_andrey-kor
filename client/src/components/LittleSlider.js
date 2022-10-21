@@ -35,8 +35,6 @@ export const LittleSlider = (props) => {
         setSlide(+event.target.dataset.id)
     }
 
-    console.log(slide)
-
     return (    
         <div className="little-slider">
             <SlidesRibbon 

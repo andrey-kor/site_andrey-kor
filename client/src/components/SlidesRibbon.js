@@ -3,7 +3,6 @@ import { LittleSlide } from './LittleSlide'
 
 export const SlidesRibbon = (props) => {
     const slides = props.slides
-    console.log(slides)
 
     return (
         <div 

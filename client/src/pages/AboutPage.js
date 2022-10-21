@@ -1,8 +1,13 @@
 import React from 'react'
 import { LittleSlider } from '../components/LittleSlider'
+import { StepsGallery } from '../components/StepsGallery'
+import { useScroll } from '../hooks/scroll.hook'
 import sliderAboutData from '../data/sliderAboutPage.json'
+import stepsGalleryAboutData from '../data/steps-gallery-about-page.json'
 
 export const AboutPage = () => {
+    const scroll = useScroll()
+
   return (
     <div className="content-wrapper">
         <div className="content">
@@ -67,9 +72,12 @@ export const AboutPage = () => {
                 <p className="text">
                     Так получилось, что на предыдущем месте работы помимо программирования я стал всё больше и больше работать с дизайном. 
                 </p>
-                <div className="steps-gallery__holder">
-                    
-                </div>
+                
+                <StepsGallery 
+                    slides={stepsGalleryAboutData}
+                    scroll={scroll}
+                />
+
                 <p className="text">
                     Благодаря техническому бэкграунду <span className="text_accent">мне удавалось создавать очень понятные для пользователей инструкции и схемы</span> (сужу по их отзывам). 
                     Так я стал делать первые шаги в дизайне и всё больше понимал, что внешний вид продукта и удобство его использования - чрезвычайно важные вещи. 
