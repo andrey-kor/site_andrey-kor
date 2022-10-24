@@ -1,6 +1,7 @@
 import React from 'react'
 import { Slider } from '../components/Slider'
 import { ArticleCards } from '../components/ArticleCards'
+import { AboutMe } from '../components/AboutMe'
 import sliderProjectsData from '../data/sliderProjectsData.json'
 import articles from '../data/articles.json'
 
@@ -25,7 +26,8 @@ export const MainPage = () => {
                     <a href="/about">
                         <h2 className="title title_orange">ОБО МНЕ</h2>
                     </a>
-                </div>
+                    <AboutMe />
+                </div>  
             </div>
         </div>
     )
