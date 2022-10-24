@@ -1,9 +1,7 @@
 import React from 'react'
-import colorOfTools from '../data/color-of-tool.json'
+import toolsColor from '../data/toolsColor.json'
 
-export const ToolsList = ({ slide }) => {
-    const tools = slide.tools
-
+export const ToolsList = ({ tools }) => {
     return (
         <ul className="tools-list-wrapper">
             {
@@ -11,7 +9,7 @@ export const ToolsList = ({ slide }) => {
                     return (
                         <div 
                             className="tool" 
-                            style={{ backgroundColor: colorOfTools[tool]}}
+                            style={{ backgroundColor: toolsColor[tool]}}
                             key={index}
                         >
                             {tool}

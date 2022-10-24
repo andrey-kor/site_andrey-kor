@@ -44,7 +44,7 @@ export const MainSlide = ({ slide }) => {
                 </div>
                 <div className="desc__tools-wrapper">
                     <div className="desc__subtitle">Инструменты</div>
-                    <ToolsList slide={slide}/>
+                    <ToolsList tools={slide.tools}/>
                 </div>
             </div>
         </div>
