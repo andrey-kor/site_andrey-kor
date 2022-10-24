@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SliderArrows } from './SliderArrows'
 import { SlidesRibbon } from './SlidesRibbon'
 import { SliderPoints } from './SliderPoints'
-import '../styles/compontnts/littleSlider.css'
+import '../styles/components/littleSlider.css'
 
 export const Slider = (props) => {
     const [slide, setSlide] = useState(0)

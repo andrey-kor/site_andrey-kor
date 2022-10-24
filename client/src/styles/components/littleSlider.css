@@ -1,7 +1,7 @@
 .slider{
     position: relative;
     overflow: hidden;
-    padding: 20px 0;
+    margin: 20px 0;
 }
 
 .slider__ribbon{

@@ -2,7 +2,7 @@ import React from 'react'
 import { FeatureList } from './FeatureList'
 import { ToolsList } from './ToolsList'
 import importedImages from '../lib/helpers/importImages.js'
-import '../styles/compontnts/mainSlider.css'
+import '../styles/components/mainSlider.css'
 
 export const MainSlide = ({ slide }) => {
     return (

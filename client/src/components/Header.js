@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { MenuBurger } from './MenuBurger'
-import '../styles/compontnts/header.css'
+import '../styles/components/header.css'
 
 export const Header = () => {
 

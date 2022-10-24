@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { StepGalleryImageList } from '../components/StepGalleryImageList'
 import { StepGalleryTextList } from '../components/StepGalleryTextList'
-import '../styles/compontnts/stepsGallery.css'
+import '../styles/components/stepsGallery.css'
 
 export const StepsGallery = ({ slides, scroll }) => {
 
