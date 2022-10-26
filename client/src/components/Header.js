@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { MenuBurger } from './MenuBurger'
 import '../styles/components/header.css'
+import { NavBar } from './NavBar'
 
 export const Header = () => {
 
@@ -27,23 +29,13 @@ export const Header = () => {
         <div className="header__wrapper">
             <div className="header">
                 <div className="logo">
-                    <a className="logo-link" href="/">
+                    <Link className="logo-link" to="/">
                         <div className="logo__text">ANDREY-KOR.RU</div>
-                    </a>
+                    </Link>
                 </div>
-                <nav className={`menu-wrapper ${ menuState ? "menu-wrapper_active" : "" }`}>
-                    <ul className="menu">
-                        <li className="menu__item">
-                            <a href="/about">Обо мне</a>
-                        </li>
-                        <li className="menu__item">
-                            <a href="/projects">Проекты</a>
-                        </li>
-                        <li className="menu__item">
-                            <a href="/articles">Статьи</a>
-                        </li>
-                    </ul>
-                </nav>
+                <NavBar 
+                    menuState={menuState}
+                />
                 <MenuBurger 
                     changeMenu={ handleMenuState }
                     menuState={ menuState }

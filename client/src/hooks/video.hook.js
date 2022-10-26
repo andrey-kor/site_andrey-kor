@@ -10,7 +10,7 @@ export const useVideo = () => {
                     setStatus('play')
                 })
                 .catch((e) => {
-                    console.log(e.message)
+                    console.log('error: ', e.message)
                 })
         }
         else if (event.type === 'mouseleave') {

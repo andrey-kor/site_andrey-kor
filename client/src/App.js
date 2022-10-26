@@ -10,11 +10,11 @@ function App() {
   return (
     <>
       <div className="background"></div>
-      <Header />
       <Router>
-          {routes}
+        <Header />
+        {routes}
+        <Footer />
       </Router>
-      <Footer />
     </>
 
   )
