@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import importedImages from '../lib/helpers/importImages.js'
 import '../styles/components/article-cards.css'
 
@@ -23,7 +24,7 @@ export const ArticleCards = ({ articles }) => {
 const ArticleCard = ({ article }) => {
     return (
         <div className="article">
-            <a href={article.link}>
+            <Link to={`articles/${article.link}`}>
                 <div className="article__image-wrapper">
                     <img src={importedImages[article.image]} alt={article.alt} />
                 </div>
@@ -32,7 +33,7 @@ const ArticleCard = ({ article }) => {
                         {article.title}
                     </p>
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }

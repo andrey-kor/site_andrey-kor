@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Slider } from '../components/Slider'
 import { StepsGallery } from '../components/StepsGallery'
+import { ToMainPageButton } from '../components/ToMainPageButton'
 import sliderAboutData from '../data/sliderAboutPage.json'
 import stepsGalleryAboutData from '../data/steps-gallery-about-page.json'
 import '../styles/aboutPage.css'
 
 export const AboutPage = () => {
-    console.log('render')
-
+    
     const nextText = useRef()
     const observer = useRef()
 
@@ -139,9 +138,7 @@ export const AboutPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="to-main-page-link__wrapper">
-                        <Link to="/" className="to-main-page-link">На главную страницу</Link>
-                    </div>
+                    <ToMainPageButton />
                 </div>
                 <div className="footer-holder"></div>
             </div>

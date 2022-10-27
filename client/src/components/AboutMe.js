@@ -1,4 +1,4 @@
-import Recat from 'react'
+import { Link } from 'react-router-dom'
 import resumeFile from '../files/korneev-cv.pdf'
 import '../styles/components/about-me.css'
 
@@ -26,7 +26,7 @@ export const AboutMe = () => {
                     </p>
                 </div>
                 <div className="about-link-more__wrapper">
-                    <a href="/about" className="anout__link-more">узнать больше</a>
+                    <Link to="/about" className="anout__link-more">узнать больше</Link>
                 </div>
             </div>
         </div>

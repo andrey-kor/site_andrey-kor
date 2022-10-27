@@ -4,7 +4,6 @@ import { MainPage } from './pages/MainPage'
 import { AboutPage } from './pages/AboutPage'
 import { ArticlesPage } from './pages/ArticlesPage'
 import { ProjectsPage } from './pages/ProjectsPage'
-import { ArticlesId } from './pages/ArticlesId'
 import { ErrorPage } from './pages/ErrorPage'
 
 export const useRoutes = () => {
@@ -13,7 +12,7 @@ export const useRoutes = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/articles" element={<ArticlesPage />} />
-            <Route path="/articles/:id" element={<ArticlesId />} />
+            <Route path="/articles/:id" element={<ArticlesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="*" element={<ErrorPage />}/>
         </Routes>

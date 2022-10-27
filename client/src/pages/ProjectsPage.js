@@ -1,5 +1,6 @@
 import React from 'react'
 import { ProjectsList } from '../components/ProjectsList'
+import { ToMainPageButton } from '../components/ToMainPageButton'
 import projects from '../data/projects-description.json'
 
 export const ProjectsPage = () => {
@@ -11,6 +12,7 @@ export const ProjectsPage = () => {
           <ProjectsList 
             projects={projects}
           />
+          <ToMainPageButton />
         </div>
       </div>
     </div>
