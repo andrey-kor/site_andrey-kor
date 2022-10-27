@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Slider } from '../components/Slider'
 import { ArticleCards } from '../components/ArticleCards'
 import { AboutMe } from '../components/AboutMe'
@@ -10,22 +11,22 @@ export const MainPage = () => {
         <div className="content-wrapper">
             <div className="content">
                 <div className="content__body">
-                    <a href="/projects">
+                    <Link to="/projects">
                         <h2 className="title title_pink-filled">ПРОЕКТЫ</h2>
-                    </a>
+                    </Link>
                     <Slider 
                         slides={sliderProjectsData} 
                         targetSlider={'projects'}
                     />
-                    <a href="/articles">
+                    <Link to="/articles">
                         <h2 className="title title_blue">СТАТЬИ</h2>
-                    </a>
+                    </Link>
                     <ArticleCards
                         articles={articles}
                     />
-                    <a href="/about">
+                    <Link to="/about">
                         <h2 className="title title_orange">ОБО МНЕ</h2>
-                    </a>
+                    </Link>
                     <AboutMe />
                 </div>  
             </div>

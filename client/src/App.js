@@ -1,5 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { ScrollToTop } from './components/ScrollToTop'
 import { useRoutes } from './routes';
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
@@ -11,6 +12,7 @@ function App() {
     <>
       <div className="background"></div>
       <Router>
+        <ScrollToTop />
         <Header />
         {routes}
         <Footer />

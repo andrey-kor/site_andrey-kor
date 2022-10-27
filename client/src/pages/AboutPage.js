@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Slider } from '../components/Slider'
 import { StepsGallery } from '../components/StepsGallery'
 import sliderAboutData from '../data/sliderAboutPage.json'
@@ -17,7 +18,7 @@ export const AboutPage = () => {
         if (observer.current) observer.current.disconnect()
 
         const callback = (entries, observer) => {
-            if( entries[0].isIntersecting) {
+            if (entries[0].isIntersecting) {
                 setAnimationStart(true)
             }
         }
@@ -139,7 +140,7 @@ export const AboutPage = () => {
                         </div>
                     </div>
                     <div className="to-main-page-link__wrapper">
-                        <a href="/" className="to-main-page-link">На главную страницу</a>
+                        <Link to="/" className="to-main-page-link">На главную страницу</Link>
                     </div>
                 </div>
                 <div className="footer-holder"></div>
