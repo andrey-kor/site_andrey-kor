@@ -5,52 +5,33 @@ const mongoose = require('mongoose')
 
 const app = express()
 
-app.use('/articles', require('./routes/article.routes'))
+app.use(express.json({ extended: true }))
+
+app.use('/api/articles', require('./routes/article.routes'))
+
+if (process.env.NODE_ENV === 'production') {
+    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+    app.get('*', (req,res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}
 
 const PORT = config.get('port') || 5000
 
-// app.set('view engine', 'ejs')
-
-mongoose
-    .connect(config.get('mongoUri'), { useNewUrlParser: true, useUnifiedTopology: true })
-    .then((res) => {
-        console.log('Connected to DB')
-    })
-    .then(() => {
-        app.listen(PORT, (error) => {
-            error ? console.log(error) : console.log(`The server has been started. Port ${PORT}`)
+async function start() {
+    try {
+        await mongoose.connect(config.get('mongoUri'), {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            // useCreateIndex: true
         })
-    })
-    .catch((error) => {
-        console.log(error)
+        app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
+    } catch (e) {
+        console.log('Server error: ', e.message);
         process.exit(1)
-    })
+    }
 
-// const createPath = (page) => path.resolve(__dirname, './dist', `${page}.html`)
+}
 
-// app.get('/', (req, res) => {
-//     res.sendFile(createPath('index'))
-// })
-
-// app.get('/projects', (req, res) => {
-//     res.sendFile(createPath('projects'))
-// })
-
-// app.get('/about', (req, res) => {
-//     res.sendFile(createPath('about'))
-// })
-
-// app.get('/articles', (req, res) => {
-//     res.redirect(301, '/articles/frontend-way')
-// })
-
-// app.get("/articles/:link", (req, res) => {
-//     const article = req.params.link
-//     res.render(createEjsPath('articles'), { article })
-// })
-
-// app.use((req, res) => {
-//     res
-//         .status(404)
-//         .sendFile(createPath('404'))
-//     })
+start()

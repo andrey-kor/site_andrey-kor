@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { ToolsList } from './ToolsList'
-import { useVideo } from '../hooks/video.hook'
+import { useVideo } from '../hooks/useVideo'
 import importedImages from '../lib/helpers/importImages'
 import importedVideos from '../lib/helpers/importVideos'
 import '../styles/components/projects-list.css'

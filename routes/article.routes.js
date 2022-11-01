@@ -1,18 +1,19 @@
 const {Router} = require('express')
 const Article = require('../models/Article')
 const router = Router()
+const articles = require ('../client/src/data/articles.json')
 
-// articles
+// /api/getarticles
 router.get('/', async (req, res) => {
     try{
-        const articles = await Article.find({ })
+        const articles = await Article.find({})
         res.json(articles)
     } catch(e) {
         res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова' })
     } 
 })
 
-// articles/id
+// /api/getarticles/:id
 router.get('/:id', async (req, res) => {
     try {
         const article = await Article.findById(req.params.id)

@@ -1,24 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
 import { Articles } from '../components/Articles'
 import { ToMainPageButton } from '../components/ToMainPageButton'
-import articles from '../data/articles.json'
+import { Loading } from '../components/Loading/Loading'
+import { useHttp } from '../hooks/useHttp'
 import '../styles/articlesPage.css'
 
 export const ArticlesPage = () => {
-  
-  const params = useParams()
 
+  const {request, loading} = useHttp()
+  const [articles, setArticles] = useState([])
   const [currentArticle, setCurrentArticle] = useState(articles[0])
+  const linkId = useParams().id || ''
+
+  const getArticles = useCallback(async () => {
+    try {
+      const fetched = await request('/api/articles', 'GET')
+      setArticles(fetched)
+    } catch (e) {
+      console.log('error: ', e)
+    }
+  }, [request])
+
+  useEffect(() => {
+    getArticles() 
+  }, [getArticles])
   
   useEffect(() => {
-    handlerSetArticle()
-  }, [params])
-
-  const handlerSetArticle = () => {
-    const targetAtricle = articles.find(article => article.link === params.id) || articles[0]
+    const targetAtricle = articles.find(article => article.link === linkId) || articles[0]
     setCurrentArticle(targetAtricle)
-  } 
+  }, [articles, linkId])
+
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <div className="content-wrapper">

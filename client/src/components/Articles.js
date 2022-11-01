@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
-import {Link, useParams} from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Articles = ({ articles, currentArticle }) => {
+
+    if (!articles || !currentArticle) return 
 
     return (
         <div className="articles">
@@ -24,13 +26,13 @@ const ArticlesList = ({ articles, currentArticle }) => {
     return (
         <ul className="articles-list">
             { 
-                articles.map((article, index) => {
+                articles.map((article) => {
                     return (
                         <ArticleListItem 
-                            key={index}
+                            key={article._id}
                             link={article.link}
                             title={article.title}
-                            isCurrent={currentArticle.id === article.id}
+                            isCurrent={currentArticle._id === article._id}
                         />
                     )
                 })
