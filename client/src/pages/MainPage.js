@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Slider } from '../components/Slider'
 import { ArticleCards } from '../components/ArticleCards'
 import { AboutMe } from '../components/AboutMe'
+import { articlesRequest } from '../components/API/articlesRequest'
+import { Loading } from '../components/Loading/Loading'
 import sliderProjectsData from '../data/sliderProjectsData.json'
-import articles from '../data/articles.json'
 
 export const MainPage = () => {
+
+    const { getArticles, loading, articles } = articlesRequest()
+  
+    useEffect(() => {
+        getArticles() 
+    }, [getArticles])
+
     return (
         <div className="content-wrapper">
             <div className="content">
@@ -21,9 +29,9 @@ export const MainPage = () => {
                     <Link to="/articles">
                         <h2 className="title title_blue">СТАТЬИ</h2>
                     </Link>
-                    <ArticleCards
-                        articles={articles}
-                    />
+                    {
+                        loading ? <Loading /> : <ArticleCards articles={articles} />
+                    }
                     <Link to="/about">
                         <h2 className="title title_orange">ОБО МНЕ</h2>
                     </Link>

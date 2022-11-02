@@ -3,28 +3,19 @@ import { useParams } from 'react-router-dom'
 import { Articles } from '../components/Articles'
 import { ToMainPageButton } from '../components/ToMainPageButton'
 import { Loading } from '../components/Loading/Loading'
-import { useHttp } from '../hooks/useHttp'
+import { articlesRequest } from '../components/API/articlesRequest'
 import '../styles/articlesPage.css'
 
 export const ArticlesPage = () => {
 
-  const {request, loading} = useHttp()
-  const [articles, setArticles] = useState([])
-  const [currentArticle, setCurrentArticle] = useState(articles[0])
-  const linkId = useParams().id || ''
-
-  const getArticles = useCallback(async () => {
-    try {
-      const fetched = await request('/api/articles', 'GET')
-      setArticles(fetched)
-    } catch (e) {
-      console.log('error: ', e)
-    }
-  }, [request])
-
+  const { getArticles, loading, articles } = articlesRequest()
+  
   useEffect(() => {
     getArticles() 
   }, [getArticles])
+  
+  const [currentArticle, setCurrentArticle] = useState(articles[0])
+  const linkId = useParams().id || ''
   
   useEffect(() => {
     const targetAtricle = articles.find(article => article.link === linkId) || articles[0]
