@@ -1,0 +1,16 @@
+.tools-list-wrapper{
+    margin: 0 0 0 20px;
+}
+
+.tool{
+    display: inline-block;
+    margin: 10px 16px 0 0 ;
+    padding: 0 10px;
+    height: 20px;
+    background-color: #F56969;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}

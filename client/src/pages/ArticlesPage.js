@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
-import { Articles } from '../components/Articles'
-import { ToMainPageButton } from '../components/ToMainPageButton'
+import { Articles } from '../components/Articles/Articles'
+import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
 import { Loading } from '../components/Loading/Loading'
-import { articlesRequest } from '../components/API/articlesRequest'
-import '../styles/articlesPage.css'
+import { useArticlesRequest } from '../hooks/useArticlesRequest'
+import '../components/Articles/articlesPage.css'
 
 export const ArticlesPage = () => {
 
-  const { getArticles, loading, articles } = articlesRequest()
+  const { getArticles, loading, articles } = useArticlesRequest()
   
   useEffect(() => {
     getArticles() 

@@ -1,0 +1,37 @@
+.header__wrapper{
+    background-color: #20232a;
+}
+
+.header{
+    margin: 0 auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    color: #fff;
+    font-family: 'Onest', sans-serif;
+    font-size: 18px;
+}
+
+.logo__text{
+    height: 45px;
+    padding: 0 30px;
+    background-color: #595b69;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 1000px){ 
+    .logo__text{
+        height: 45px;
+        border-radius: 15px;
+        font-size: 18px;
+        line-height: 45px;
+    }
+}

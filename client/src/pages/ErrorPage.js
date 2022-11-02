@@ -1,5 +1,5 @@
 import React from 'react'
-import { ToMainPageButton } from '../components/ToMainPageButton'
+import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
 import '../styles/errorPage.css'
 
 export const ErrorPage = () => {

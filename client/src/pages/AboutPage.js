@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Slider } from '../components/Slider'
-import { StepsGallery } from '../components/StepsGallery'
-import { ToMainPageButton } from '../components/ToMainPageButton'
+import { Slider } from '../components/Slider/Slider'
+import { StepsGallery } from '../components/StepsGallery/StepsGallery'
+import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
+import { MediaButton } from '../components/MediaButton/MediaButton'
 import sliderAboutData from '../data/sliderAboutPage.json'
 import stepsGalleryAboutData from '../data/steps-gallery-about-page.json'
+import resumeFile from '../files/korneev-cv.pdf'
 import '../styles/aboutPage.css'
 
 export const AboutPage = () => {
@@ -32,16 +34,25 @@ export const AboutPage = () => {
                     <div className="about-title-wrapper">
                         <h1 className="main-title">ОБО МНЕ</h1>
                         <div className="media-links__wrapper media-links-about__wrapper">
-                            {/* A place to link for the downloaded file */}
-                            <a href="https://github.com/andrey-kor" target="_blank">
-                                <div className="media-link media-link_green">Мой GitHub</div>
-                            </a>
+                            <MediaButton
+                                href={resumeFile}
+                                targetNew={'true'}
+                                style={'pink'}
+                            >
+                                Открыть резюме
+                            </MediaButton>
+                            <MediaButton
+                                href={'https://github.com/andrey-kor'}
+                                targetNew={'true'}
+                                style={'green'}
+                            >
+                                Мой GitHub
+                            </MediaButton>
                         </div>
                     </div>
                     <div className="about-intro__wrapper">
                         <div className="about-intro__column">
                             <div className="about-intro__img-wrapper">
-                                
                             </div>
                         </div>
                         <div className="about-intro__column">

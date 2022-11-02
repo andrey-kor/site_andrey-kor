@@ -1,0 +1,129 @@
+.main-slide {
+    position: relative;
+    display: flex;
+    flex: 1 0 100%;
+    padding: 30px 70px 50px;
+    border: 4px solid #F56969;
+    border-radius: 40px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+
+.main-slider__image-column{
+    max-width: 569px;
+    display: flex;
+    align-items: center;
+}
+
+.main-slider__image-column img{
+    width: 100%;
+}
+
+.main-slider__description-column{
+    margin-left: 50px;
+    max-width: 445px;
+}
+
+.desc__title{
+    padding: 5px 15px;
+    background-color: #181E4B;
+    border-radius: 20px 0 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.desc__links-wrapper{
+    margin: 15px 0;
+}
+
+.desc__links{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.desc__features-wrapper{
+    margin: 12px 0 0 0;
+}
+
+.desc__subtitle{
+    width: 119px;
+    height: 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+}
+
+.desc__features-item{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.desc__features-item img{
+    width: 20px;
+    height: 20px;
+}
+
+.desc__features-item span{
+    margin-left: 15px;
+}
+
+.desc__tools-wrapper{
+    margin-top: 32px;
+}
+
+@media (max-width: 1000px){
+    .main-slide{
+        padding: 30px 60px 50px;
+    }
+    .desc__title{
+        font-size: 16px;
+    }
+    .main-slider__description-column{
+        margin-left: 20px;
+    }
+    .desc__features-item{
+        margin-top: 5px ;
+    }
+    .desc__tools-wrapper{
+        margin-top: 25px;;
+    }
+}
+
+@media (max-width: 768px){
+    .main-slide{
+        display: block;
+    }
+    .main-slider__image-column{
+        margin: 0 auto;
+    }
+    .main-slider__description-column{
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .desc__features-wrapper{
+        margin-top: 20px;
+    }
+    .desc__title{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 460px){
+    .main-slide{
+        padding: 20px 45px 60px;
+    }
+    .main-slider__description-column{
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .desc__title{
+        font-size: 16px;
+    }
+}

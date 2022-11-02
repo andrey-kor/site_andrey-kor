@@ -1,6 +1,6 @@
 import React from 'react'
-import { ProjectsList } from '../components/ProjectsList'
-import { ToMainPageButton } from '../components/ToMainPageButton'
+import { ProjectsList } from '../components/ProjectsList/ProjectsList'
+import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
 import projects from '../data/projects-description.json'
 
 export const ProjectsPage = () => {
