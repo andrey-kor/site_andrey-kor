@@ -1,7 +1,6 @@
-const {Router} = require('express')
+const { Router } = require('express')
 const Article = require('../models/Article')
 const router = Router()
-const articles = require ('../client/src/data/articles.json')
 
 // /api/getarticles
 router.get('/', async (req, res) => {

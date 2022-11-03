@@ -2,24 +2,21 @@ import React from 'react'
 import { LittleSlide } from './LittleSlide'
 import { MainSlide } from './MainSlide'
 
-export const SlidesRibbon = (props) => {
-    const slides = props.slides
+export const SlidesRibbon = ({ slides, targetSlider, slideNum }) => {
 
     return (
         <div 
             className="slider__ribbon"
-            style={{ transform: `translateX(-${props.slideNum * 100}%)` }}
+            style={{ transform: `translateX(-${slideNum * 100}%)` }}
         >
             { slides.map((slide, index) => {
-                if (props.targetSlider === 'little') {
-                    return <LittleSlide key={index} slide={slide}/>
+                if (targetSlider === 'little') {
+                    return <LittleSlide key={ index } slide={ slide }/>
                 }
-                else if (props.targetSlider === 'projects') {
-                    return <MainSlide key={index} slide={slide}/>
+                else if (targetSlider === 'projects') {
+                    return <MainSlide key={ index } slide={ slide }/>
                 }
-
-            }
-            )}
+            })}
         </div>
     )
 }

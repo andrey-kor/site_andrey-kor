@@ -10,9 +10,9 @@ export const StepGalleryText = ({ slide, currentSlide, index }) => {
 
     return (
         <div 
-            className={className} 
+            className={ className } 
         >
-            {slide.text}
+            { slide.text }
         </div>
     )
 }

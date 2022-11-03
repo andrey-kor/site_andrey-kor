@@ -9,29 +9,29 @@ export const MainSlide = ({ slide }) => {
         <div className="main-slide">
             <div className="main-slider__image-column">
                 <img 
-                    src={importedImages[slide.main_image]}
-                    alt={slide.alt} 
+                    src={ importedImages[slide.main_image] }
+                    alt={ slide.alt } 
                 />
             </div>
             <div className="main-slider__description-column">
                 <div className="desc__title">
                     <a 
-                        href={slide['projectLink']} 
+                        href={ slide['projectLink'] } 
                         target="_blank"
                     >
-                        {slide['name']}
+                        { slide['name'] }
                     </a>
                 </div>
                 <div className="desc__links-wrapper">
                     <div className="desc__links">
                         <a 
-                            href={slide['gitLink']}  
+                            href={ slide['gitLink'] }  
                             target="_blank"
                         >
                             <div className="media-link media-link_green">GitHub проекта</div>
                         </a>
                         <a 
-                            href={slide['gitLink']}  
+                            href={ slide['gitLink'] }  
                             target="_blank"
                         >
                             <div className="media-link media-link_purple">Подробнее</div>
@@ -40,11 +40,11 @@ export const MainSlide = ({ slide }) => {
                 </div>
                 <div className="desc__features-wrapper">
                     <div className="desc__subtitle">Особенности</div>
-                    <FeatureList features={slide.features}/>
+                    <FeatureList features={ slide.features }/>
                 </div>
                 <div className="desc__tools-wrapper">
                     <div className="desc__subtitle">Инструменты</div>
-                    <ToolsList tools={slide.tools}/>
+                    <ToolsList tools={ slide.tools }/>
                 </div>
             </div>
         </div>

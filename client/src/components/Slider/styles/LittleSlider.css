@@ -39,7 +39,7 @@
 }
 
 .little-slide__title{
-    font-family: 'Inter' sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 700;
 }
@@ -167,5 +167,4 @@
         margin: 0 -25px;
         font-size: 16px;
     }
-
 }

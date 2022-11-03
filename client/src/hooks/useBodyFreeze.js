@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const useBodyFreeze = () => {
     
     const freeze = (menuState) => {

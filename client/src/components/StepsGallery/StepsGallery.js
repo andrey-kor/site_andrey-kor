@@ -24,14 +24,14 @@ export const StepsGallery = ({ slides, animationStart }) => {
         <div className="steps-gallery">
             <div className="steps-gallery__image-column">
                 <StepGalleryImageList 
-                    slides={slides}
-                    currentSlide={currentSlide}
+                    slides={ slides }
+                    currentSlide={ currentSlide }
                 />
             </div>
             <div className="steps-gallery__text-column">
                 <StepGalleryTextList 
-                    slides={slides}
-                    currentSlide={currentSlide}
+                    slides={ slides }
+                    currentSlide={ currentSlide }
                 />
             </div>
         </div>

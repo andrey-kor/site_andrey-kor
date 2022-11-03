@@ -11,9 +11,9 @@ export const ToolsList = ({ tools }) => {
                         <div 
                             className="tool" 
                             style={{ backgroundColor: toolsColor[tool]}}
-                            key={index}
+                            key={ index }
                         >
-                            {tool}
+                            { tool }
                         </div>   
                     )
                 })

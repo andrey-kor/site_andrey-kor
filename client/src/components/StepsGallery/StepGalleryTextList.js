@@ -7,10 +7,10 @@ export const StepGalleryTextList = ({ slides, currentSlide }) => {
             { slides.map((slide, index) => {
                 return (
                     <StepGalleryText 
-                        slide={slide}
-                        key={index}   
-                        index={index}
-                        currentSlide={currentSlide}
+                        slide={ slide }
+                        key={ index }    
+                        index={ index }
+                        currentSlide={ currentSlide }
                     />
                 )
             })}

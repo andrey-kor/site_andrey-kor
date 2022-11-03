@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { useHttp } from './useHttp'
 
 export const useArticlesRequest = () => {

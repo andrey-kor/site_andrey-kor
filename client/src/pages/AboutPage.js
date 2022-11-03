@@ -39,16 +39,16 @@ export const AboutPage = () => {
                         <h1 className="main-title">ОБО МНЕ</h1>
                         <div className="media-links__wrapper media-links-about__wrapper">
                             <MediaButton
-                                href={resumeFile}
-                                targetNew={'true'}
-                                style={'pink'}
+                                href={ resumeFile }
+                                targetNew={ 'true' }
+                                style={ 'pink' }
                             >
                                 Открыть резюме
                             </MediaButton>
                             <MediaButton
-                                href={'https://github.com/andrey-kor'}
-                                targetNew={'true'}
-                                style={'green'}
+                                href={ 'https://github.com/andrey-kor' }
+                                targetNew={ 'true' }
+                                style={ 'green' }
                             >
                                 Мой GitHub
                             </MediaButton>
@@ -85,8 +85,8 @@ export const AboutPage = () => {
                     </p>
             
                     <Slider 
-                        slides={sliderAboutData} 
-                        targetSlider={'little'}
+                        slides={ sliderAboutData } 
+                        targetSlider={ 'little' }
                     />
             
                     <p className="text">
@@ -106,11 +106,11 @@ export const AboutPage = () => {
                     </p>
                     
                     <StepsGallery 
-                        slides={stepsGalleryAboutData}
-                        animationStart={animationStart}
+                        slides={ stepsGalleryAboutData }
+                        animationStart={ animationStart }
                     />
 
-                    <p className="text" ref={nextText}>
+                    <p className="text" ref={ nextText }>
                         Благодаря техническому бэкграунду <span className="text_accent">мне удавалось создавать очень понятные для пользователей инструкции и схемы</span> (сужу по их отзывам). 
                         Так я стал делать первые шаги в дизайне и всё больше понимал, что внешний вид продукта и удобство его использования - чрезвычайно важные вещи. 
                         И всё же придумывание уникальных макетов и сочетание цветов давалось мне не так легко, чтобы копнуть в эту нишу глубже. 

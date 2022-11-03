@@ -7,10 +7,10 @@ export const StepGalleryImageList = ({ slides, currentSlide }) => {
             { slides.map((slide, index) => {
                 return (
                     <StepGalleryImage 
-                        slide={slide}  
-                        key={index}   
-                        index={index}
-                        currentSlide={currentSlide}
+                        slide={ slide }   
+                        key={ index }    
+                        index={ index }
+                        currentSlide={ currentSlide }
                     />
                 )
             })}

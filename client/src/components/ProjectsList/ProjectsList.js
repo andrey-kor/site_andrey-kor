@@ -9,8 +9,8 @@ export const ProjectsList = ({ projects }) => {
                 projects.map((project, index) => {
                     return (
                         <ProjectCard 
-                            project={project}
-                            key={index}
+                            project={ project }
+                            key={ index }
                         />
                     )
                 }) 

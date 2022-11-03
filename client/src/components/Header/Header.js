@@ -31,8 +31,8 @@ export const Header = () => {
                     </Link>
                 </div>
                 <NavBar 
-                    menuState={menuState}
-                    closeMenu={handleCloseMenu}
+                    menuState={ menuState }
+                    closeMenu={ handleCloseMenu }
                 />
                 <div className="menu-burger-wrapper">
                     <MenuBurger 
@@ -42,8 +42,8 @@ export const Header = () => {
                     />
                 </div>
                 <div 
-                    className={`overlay ${menuState ? 'overlay_visible' : ''}`}
-                    onClick={handleCloseMenu}
+                    className={ `overlay ${menuState ? 'overlay_visible' : ''}` }
+                    onClick={ handleCloseMenu }
                 />
             </div>
         </div>

@@ -8,11 +8,11 @@ export const ArticlesList = ({ articles, currentArticle, closeMenu }) => {
                 articles.map((article) => {
                     return (
                         <ArticleListItem 
-                            key={article._id}
-                            link={article.link}
-                            title={article.title}
-                            isCurrent={currentArticle._id === article._id}
-                            closeMenu={closeMenu}
+                            key={ article._id }
+                            link={ article.link }
+                            title={ article.title }
+                            isCurrent={ currentArticle._id === article._id }
+                            closeMenu={ closeMenu }
                         />
                         )
                     })
@@ -23,14 +23,12 @@ export const ArticlesList = ({ articles, currentArticle, closeMenu }) => {
 
 const ArticleListItem = ({ link, title, isCurrent, closeMenu }) => {
     return (
-        <li 
-            className={`articles-list__item ${isCurrent ? 'articles-list__item_active' : '' }` }
-        >
+        <li className={ `articles-list__item ${ isCurrent ? 'articles-list__item_active' : '' }` }>
             <Link 
-                to={`/articles/${link}`}
-                onClick={closeMenu}
+                to={`/articles/${ link }`}
+                onClick={ closeMenu }
             >
-                {title}
+                { title }
             </Link>
         </li>    
     )

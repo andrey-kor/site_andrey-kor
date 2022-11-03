@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Articles } from '../components/Articles/Articles'
 import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
@@ -51,7 +51,7 @@ export const ArticlesPage = () => {
     <div className="content-wrapper">
       <div className="content">
         <div className="content__body">
-          <h1 className="main-title" style={{display: 'inline-block'}}>СТАТЬИ</h1>
+          <h1 className="main-title" style={{ display: 'inline-block' }}>СТАТЬИ</h1>
           <div className="articles-burger-wrapper">
             <MenuBurger 
               changeMenu={ handleMenuState }
@@ -60,14 +60,14 @@ export const ArticlesPage = () => {
             />
           </div>
           <Articles 
-            articles={articles}
-            currentArticle={currentArticle}
-            menuState={menuState}
-            closeMenu={handleCloseMenu}
+            articles={ articles }
+            currentArticle={ currentArticle }
+            menuState={ menuState }
+            closeMenu={ handleCloseMenu }
           />
           <div 
-            className={`overlay ${menuState ? 'overlay_visible' : ''}`}
-            onClick={handleCloseMenu}
+            className={ `overlay ${menuState ? 'overlay_visible' : ''}` }
+            onClick={ handleCloseMenu }
           />
           <ToMainPageButton />
         </div>

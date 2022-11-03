@@ -9,7 +9,6 @@
     overflow: hidden;
 }
 
-
 .main-slider__image-column{
     max-width: 569px;
     display: flex;
@@ -49,7 +48,7 @@
 .desc__subtitle{
     width: 119px;
     height: 28px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;

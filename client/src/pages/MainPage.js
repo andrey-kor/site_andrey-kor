@@ -34,8 +34,8 @@ export const MainPage = () => {
                             <h2 className="title title_pink-filled">ПРОЕКТЫ</h2>
                         </Link>
                         <Slider 
-                            slides={sliderProjectsData} 
-                            targetSlider={'projects'}
+                            slides={ sliderProjectsData } 
+                            targetSlider={ 'projects' }
                         />
                     </section>
                     <section>
@@ -43,7 +43,7 @@ export const MainPage = () => {
                             <h2 className="title title_blue">СТАТЬИ</h2>
                         </Link>
                         {
-                            loading ? <Loading /> : <ArticleCards articles={articles} />
+                            loading ? <Loading /> : <ArticleCards articles={ articles } />
                         }
                     </section>
                 </div>  

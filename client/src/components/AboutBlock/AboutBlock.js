@@ -10,7 +10,7 @@ export const AboutBlock = () => {
             </div>
             <div className="about__content-colunm">
                 <div className="media-links__wrapper">
-                    <a href={resumeFile} target="_blank">
+                    <a href={ resumeFile } target="_blank">
                         <div className="media-link media-link_pink">Открыть резюме</div>
                     </a>
                     <a href="https://github.com/andrey-kor" target="_blank">

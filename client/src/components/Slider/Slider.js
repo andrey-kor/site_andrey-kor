@@ -4,7 +4,7 @@ import { SlidesRibbon } from './SlidesRibbon'
 import { SliderPoints } from './SliderPoints'
 import './styles/LittleSlider.css'
 
-export const Slider = (props) => {
+export const Slider = ({ slides, targetSlider }) => {
     const [slide, setSlide] = useState(0)
 
     const swipeSlideHandler = event => {
@@ -23,8 +23,8 @@ export const Slider = (props) => {
         if (newSlide <= 0) {
             newSlide = 0
         }
-        else if (newSlide >= props.slides.length-1) {
-            newSlide = props.slides.length-1
+        else if (newSlide >= slides.length-1) {
+            newSlide = slides.length-1
         }
 
         setSlide(newSlide)
@@ -38,17 +38,17 @@ export const Slider = (props) => {
     return (    
         <div className="slider">
             <SlidesRibbon 
-                slides={ props.slides }
+                slides={ slides }
                 slideNum={ slide } 
-                targetSlider={ props.targetSlider }
+                targetSlider={ targetSlider }
             />
             <SliderArrows 
                 changeSlide={ swipeSlideHandler }
                 slideNum={ slide } 
-                maxSlide={ props.slides.length-1 }
+                maxSlide={ slides.length-1 }
             />
             <SliderPoints 
-                slides={ props.slides }
+                slides={ slides }
                 changeSlide={ changeSlideHandler }
                 slideNum={ slide } 
             />

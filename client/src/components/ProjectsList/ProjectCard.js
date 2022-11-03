@@ -28,29 +28,29 @@ export const ProjectCard = ({ project }) => {
                         className="main-video" 
                         preload="auto" 
                         muted 
-                        src={importedVideos[project.video]}
+                        src={ importedVideos[project.video] }
                         type="video/mp4"
-                        poster={importedImages[project.mainImage]}
-                        ref={vidRef}
+                        poster={ importedImages[project.mainImage] }
+                        ref={ vidRef }
                     >
                     </video>
                 </div>
             </div>
             <div className="project-card__text-column">
-                <h2 className="project-card__title">{project.name}</h2>
+                <h2 className="project-card__title">{ project.name }</h2>
                 <div className="project-card__links-wrapper">
                     <div className="project-card__links">
                         <MediaButton 
-                            href={project.projectLink}
-                            targetNew={true}
-                            style={'pink'}
+                            href={ project.projectLink }
+                            targetNew={ true }
+                            style={ 'pink' }
                         >
                             К проекту
                         </MediaButton>
                         <MediaButton 
-                            href={project.gitLink}
-                            targetNew={true}
-                            style={'green'}
+                            href={ project.gitLink }
+                            targetNew={ true }
+                            style={ 'green' }
                         >
                             GitHub проекта
                         </MediaButton>
@@ -58,13 +58,13 @@ export const ProjectCard = ({ project }) => {
                     <div className="project-card__features-wrapper">
                         <div className="project-card__subtitle">Особенности</div>
                         <FeatureList 
-                            features={project.features}
+                            features={ project.features }
                         />
                     </div>
                     <div className="project-card__tools-wrapper">
                         <div className="project-card__subtitle">Инструменты</div>
                         <ToolsList 
-                            tools={project.tools}
+                            tools={ project.tools }
                         />
                     </div>
                 </div>

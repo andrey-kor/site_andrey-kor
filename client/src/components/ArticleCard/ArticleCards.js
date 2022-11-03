@@ -11,8 +11,8 @@ export const ArticleCards = ({ articles }) => {
                     if (index >= 3) return
                     return (
                         <ArticleCard 
-                            article={article}
-                            key={index}
+                            article={ article }
+                            key={ index }
                         />
                     )
                 })
@@ -24,13 +24,13 @@ export const ArticleCards = ({ articles }) => {
 const ArticleCard = ({ article }) => {
     return (
         <div className="article">
-            <Link to={`articles/${article.link}`}>
+            <Link to={ `articles/${ article.link }` }>
                 <div className="article__image-wrapper">
-                    <img src={importedImages[article.image]} alt={article.alt} />
+                    <img src={ importedImages[article.image] } alt={ article.alt } />
                 </div>
                 <div className="article__footer">
                     <p className="article__text">
-                        {article.title}
+                        { article.title }
                     </p>
                 </div>
             </Link>

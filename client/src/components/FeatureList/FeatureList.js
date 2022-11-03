@@ -10,10 +10,10 @@ export const FeatureList = ({ features }) => {
                     return (
                         <li 
                             className="desc__features-item"
-                            key={index}
+                            key={ index }
                         >
-                            <img src={importedImages[feature.image]} alt="icon" />
-                            <span>{feature.text}</span>
+                            <img src={ importedImages[feature.image] } alt="icon" />
+                            <span>{ feature.text }</span>
                         </li>
                     )
                 })

@@ -15,7 +15,7 @@ export const ProjectsPage = () => {
         <div className="content__body">
           <h1 className="main-title">ПРОЕКТЫ</h1>
           <ProjectsList 
-            projects={projects}
+            projects={ projects }
           />
           <ToMainPageButton />
         </div>
