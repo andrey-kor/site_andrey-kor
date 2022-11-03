@@ -5,9 +5,13 @@ import { ArticleCards } from '../components/ArticleCard/ArticleCards'
 import { AboutBlock } from '../components/AboutBlock/AboutBlock'
 import { useArticlesRequest } from '../hooks/useArticlesRequest'
 import { Loading } from '../components/Loading/Loading'
+import { useLocate } from '../hooks/useLocate'
 import sliderProjectsData from '../data/sliderProjectsData.json'
 
 export const MainPage = () => {
+
+    const { scrollToTop } = useLocate()
+    scrollToTop()
 
     const { getArticles, loading, articles } = useArticlesRequest()
   

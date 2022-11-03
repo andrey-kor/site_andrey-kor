@@ -1,8 +1,13 @@
 import React from 'react'
 import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
+import { useLocate } from '../hooks/useLocate'
 import '../styles/errorPage.css'
 
 export const ErrorPage = () => {
+
+  const { scrollToTop } = useLocate()
+  scrollToTop()
+
   return (
     <div className="error__wrapper">
         <p className="error-code">404</p>

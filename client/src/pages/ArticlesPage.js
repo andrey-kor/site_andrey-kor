@@ -6,9 +6,13 @@ import { Loading } from '../components/Loading/Loading'
 import { MenuBurger } from '../components/MenuBurger/MenuBurger'
 import { useArticlesRequest } from '../hooks/useArticlesRequest'
 import { useBodyFreeze } from '../hooks/useBodyFreeze'
+import { useLocate } from '../hooks/useLocate'
 import '../components/Articles/articlesPage.css'
 
 export const ArticlesPage = () => {
+
+  const { scrollToTop } = useLocate()
+  scrollToTop()
 
   const { getArticles, loading, articles } = useArticlesRequest()
   

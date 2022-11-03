@@ -12,6 +12,7 @@
     color: #fff;
     font-family: 'Onest', sans-serif;
     font-size: 18px;
+    position: relative;
 }
 
 .logo__text{
@@ -28,7 +29,9 @@
 }
 
 .menu-burger-wrapper{
-    position: relative;
+    position: absolute;
+    right: 20px;
+    top: inherit;
 }
 
 @media (max-width: 1000px){ 

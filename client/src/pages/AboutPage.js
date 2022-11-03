@@ -3,12 +3,16 @@ import { Slider } from '../components/Slider/Slider'
 import { StepsGallery } from '../components/StepsGallery/StepsGallery'
 import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
 import { MediaButton } from '../components/MediaButton/MediaButton'
+import { useLocate } from '../hooks/useLocate'
 import sliderAboutData from '../data/sliderAboutPage.json'
 import stepsGalleryAboutData from '../data/steps-gallery-about-page.json'
 import resumeFile from '../files/korneev-cv.pdf'
 import '../styles/aboutPage.css'
 
 export const AboutPage = () => {
+
+    const { scrollToTop } = useLocate()
+    scrollToTop()
     
     const nextText = useRef()
     const observer = useRef()
