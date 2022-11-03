@@ -10,7 +10,7 @@
 }
 
 .main-slider__image-column{
-    max-width: 569px;
+    max-width: 500px;
     display: flex;
     align-items: center;
 }

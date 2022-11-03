@@ -6,7 +6,7 @@ import { AboutBlock } from '../components/AboutBlock/AboutBlock'
 import { useArticlesRequest } from '../hooks/useArticlesRequest'
 import { Loading } from '../components/Loading/Loading'
 import { useLocate } from '../hooks/useLocate'
-import sliderProjectsData from '../data/sliderProjectsData.json'
+import projects from '../data/projects-description.json'
 
 export const MainPage = () => {
 
@@ -34,7 +34,7 @@ export const MainPage = () => {
                             <h2 className="title title_pink-filled">ПРОЕКТЫ</h2>
                         </Link>
                         <Slider 
-                            slides={ sliderProjectsData } 
+                            slides={ projects } 
                             targetSlider={ 'projects' }
                         />
                     </section>

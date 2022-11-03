@@ -84,7 +84,7 @@
                 "text": "Пока это тестовый текст, но скоро будет настоящий!"
             }
         ],
-        "tools": ["TS", "Webpack", "Babel", "HTML", "CSS"]
+        "tools": ["React", "MongoDB", "Node JS", "Express", "HTML", "CSS", "Figma"]
     }
 
 ]

@@ -18,7 +18,7 @@ export const StepsGallery = ({ slides, animationStart }) => {
         
         return () => clearInterval(slideInterval)
 
-    }, [currentSlide, slides.length, animationStart])
+    }, [currentSlide, animationStart])
 
     return (
         <div className="steps-gallery">

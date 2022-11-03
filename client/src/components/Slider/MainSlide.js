@@ -9,19 +9,19 @@ export const MainSlide = ({ slide }) => {
         <div className="main-slide">
             <div className="main-slider__image-column">
                 <img 
-                    src={ importedImages[slide.main_image] }
+                    src={ importedImages[slide.mainImage] }
                     alt={ slide.alt } 
                 />
             </div>
             <div className="main-slider__description-column">
-                <div className="desc__title">
-                    <a 
-                        href={ slide['projectLink'] } 
-                        target="_blank"
-                    >
+                <a 
+                    href={ slide['projectLink'] } 
+                    target="_blank"
+                >
+                    <div className="desc__title">
                         { slide['name'] }
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div className="desc__links-wrapper">
                     <div className="desc__links">
                         <a 
@@ -31,10 +31,10 @@ export const MainSlide = ({ slide }) => {
                             <div className="media-link media-link_green">GitHub проекта</div>
                         </a>
                         <a 
-                            href={ slide['gitLink'] }  
+                            href={ slide['projectLink'] }  
                             target="_blank"
                         >
-                            <div className="media-link media-link_purple">Подробнее</div>
+                            <div className="media-link media-link_purple">Посмотреть проект</div>
                         </a>
                     </div>
                 </div>
