@@ -14,7 +14,7 @@ export const MenuBurger = ({ changeMenu, menuState, style }) => {
     return (
         <div 
             className={ className }
-            onClick={changeMenu}
+            onClick={ changeMenu }
         >
             <span></span>
         </div>

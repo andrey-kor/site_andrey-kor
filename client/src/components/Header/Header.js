@@ -2,27 +2,24 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { MenuBurger } from '../MenuBurger/MenuBurger'
 import { NavBar } from '../NavBar/NavBar'
+import { useBodyFreeze } from '../../hooks/useBodyFreeze'
 import './Header.css'
 
 export const Header = () => {
 
     const [menuState, setMenuState] = useState(false)
+    const {freeze} = useBodyFreeze()
 
     const handleMenuState = () => {
         setMenuState(!menuState)
     }
 
-    useEffect(() => {
-        const boduClassList = document.body.classList
+    const handleCloseMenu = () => {
+        setMenuState(false)
+      }
 
-        if (menuState) {
-            boduClassList.add('_frozen')
-        }
-        else {
-            if (boduClassList.contains('_frozen')) {
-                boduClassList.remove('_frozen')
-            }
-        }
+    useEffect(() => {
+        freeze(menuState)
     }, [menuState])
     
     return (
@@ -35,11 +32,18 @@ export const Header = () => {
                 </div>
                 <NavBar 
                     menuState={menuState}
+                    closeMenu={handleCloseMenu}
                 />
-                <MenuBurger 
-                    changeMenu={ handleMenuState }
-                    menuState={ menuState }
-                    style={{ color: 'white' }}
+                <div className="menu-burger-wrapper">
+                    <MenuBurger 
+                        changeMenu={ handleMenuState }
+                        menuState={ menuState }
+                        style={{ color: 'white' }}
+                    />
+                </div>
+                <div 
+                    className={`overlay ${menuState ? 'overlay_visible' : ''}`}
+                    onClick={handleCloseMenu}
                 />
             </div>
         </div>

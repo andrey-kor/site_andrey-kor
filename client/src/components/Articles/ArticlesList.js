@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const ArticlesList = ({ articles, currentArticle }) => {
+export const ArticlesList = ({ articles, currentArticle, closeMenu }) => {
     return (
         <ul className="articles-list">
             { 
@@ -12,19 +12,23 @@ export const ArticlesList = ({ articles, currentArticle }) => {
                             link={article.link}
                             title={article.title}
                             isCurrent={currentArticle._id === article._id}
+                            closeMenu={closeMenu}
                         />
-                    )
-                })
-            }
+                        )
+                    })
+                }
         </ul>
     )
 }
 
-const ArticleListItem = ({ link, title, isCurrent }) => {
+const ArticleListItem = ({ link, title, isCurrent, closeMenu }) => {
     return (
-        <li className={`articles-list__item ${isCurrent ? 'articles-list__item_active' : '' }` }>
+        <li 
+            className={`articles-list__item ${isCurrent ? 'articles-list__item_active' : '' }` }
+        >
             <Link 
                 to={`/articles/${link}`}
+                onClick={closeMenu}
             >
                 {title}
             </Link>

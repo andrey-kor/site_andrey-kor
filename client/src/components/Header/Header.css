@@ -27,6 +27,10 @@
     color: #fff;
 }
 
+.menu-burger-wrapper{
+    position: relative;
+}
+
 @media (max-width: 1000px){ 
     .logo__text{
         height: 45px;

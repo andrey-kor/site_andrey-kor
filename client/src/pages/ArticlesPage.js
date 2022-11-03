@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom'
 import { Articles } from '../components/Articles/Articles'
 import { ToMainPageButton } from '../components/ToMainPageButton/ToMainPageButton'
 import { Loading } from '../components/Loading/Loading'
+import { MenuBurger } from '../components/MenuBurger/MenuBurger'
 import { useArticlesRequest } from '../hooks/useArticlesRequest'
+import { useBodyFreeze } from '../hooks/useBodyFreeze'
 import '../components/Articles/articlesPage.css'
 
 export const ArticlesPage = () => {
@@ -22,6 +24,21 @@ export const ArticlesPage = () => {
     setCurrentArticle(targetAtricle)
   }, [articles, linkId])
 
+  const [menuState, setMenuState] = useState(false)
+  const {freeze} = useBodyFreeze()
+
+  const handleMenuState = () => {
+    setMenuState(!menuState)
+  }
+
+  const handleCloseMenu = () => {
+    setMenuState(false)
+  }
+
+  useEffect(() => {
+    freeze(menuState)
+  }, [menuState])
+
   if (loading) {
     return <Loading />
   }
@@ -30,10 +47,23 @@ export const ArticlesPage = () => {
     <div className="content-wrapper">
       <div className="content">
         <div className="content__body">
-          <h1 className="main-title">СТАТЬИ</h1>
+          <h1 className="main-title" style={{display: 'inline-block'}}>СТАТЬИ</h1>
+          <div className="articles-burger-wrapper">
+            <MenuBurger 
+              changeMenu={ handleMenuState }
+              menuState={ menuState }
+              style={{ color: 'dark' }}
+            />
+          </div>
           <Articles 
             articles={articles}
             currentArticle={currentArticle}
+            menuState={menuState}
+            closeMenu={handleCloseMenu}
+          />
+          <div 
+            className={`overlay ${menuState ? 'overlay_visible' : ''}`}
+            onClick={handleCloseMenu}
           />
           <ToMainPageButton />
         </div>
