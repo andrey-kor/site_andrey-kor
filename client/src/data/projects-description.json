@@ -1,6 +1,39 @@
 [
     {
         "id": 0,
+        "name": "Личный сайт",
+        "mainImage": "own-site.png",
+        "alt": "OWN SITE image",
+        "video": "test.mp4",
+        "folder": "own-site",
+        "gitLink": "https://github.com/andrey-kor/site_andrey-kor",
+        "projectLink": "http://andrey-kor.ru",
+        "features": [
+            {
+                "image": "own-site-ico-1.png",
+                "text": "Интеграция с Базой Данных;"
+            },
+            {
+                "image": "own-site-ico-2.png",
+                "text": "Анимированные элементы;"
+            },
+            {
+                "image": "own-site-ico-3.png",
+                "text": "Адаптивная вёрстка;"
+            },
+            {
+                "image": "own-site-ico-4.png",
+                "text": "Меню-бургеры для мобильных интерфейсов;"
+            },
+            {
+                "image": "own-site-ico-5.png",
+                "text": "Универсальные элементы для переиспользования;"
+            }
+        ],
+        "tools": ["React", "MongoDB", "Node JS", "Express", "HTML", "CSS", "Figma"]
+    },
+    {
+        "id": 1,
         "name": "Одностраничный сайт путешествий",
         "mainImage": "jadoo.png",
         "alt": "JADOO image",
@@ -33,7 +66,7 @@
         "tools": ["CSS", "HTML", "JS"]
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "Интернет-магазин",
         "mainImage": "bangkok.png",
         "alt": "BANGKOK EXPRESS image",
@@ -64,27 +97,5 @@
             }
         ],
         "tools": ["JS", "Webpack", "Babel"]
-    },
-    {
-        "id": 2,
-        "name": "Личный сайт",
-        "mainImage": "own-site.png",
-        "alt": "OWN SITE image",
-        "video": "test.mp4",
-        "folder": "own-site",
-        "gitLink": "https://github.com/andrey-kor/site_andrey-kor",
-        "projectLink": "http://andrey-kor.ru",
-        "features": [
-            {
-                "image": "own-site-ico-1.png",
-                "text": "Прекрасный сайт, который еще в разработке"
-            },
-            {
-                "image": "own-site-ico-2.png",
-                "text": "Пока это тестовый текст, но скоро будет настоящий!"
-            }
-        ],
-        "tools": ["React", "MongoDB", "Node JS", "Express", "HTML", "CSS", "Figma"]
-    }
-
+    }  
 ]
