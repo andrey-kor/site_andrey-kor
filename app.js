@@ -9,32 +9,63 @@ app.use(express.json({ extended: true }))
 
 app.use('/api/articles', require('./routes/article.routes'))
 
+// if (process.env.NODE_ENV === 'production') {
+
+//     if (req.headers.host === 'jadoo.andrey-kor.ru') {
+//         app.use('/', express.static(path.join(__dirname, 'jadoo')))
+        
+//         app.get('*', (req,res) => {
+//             res.sendFile(path.resolve(__dirname, 'jadoo', 'index.html'))
+//         })
+//     }
+
+//     else if (req.headers.host === 'bangkok.andrey-kor.ru') {
+//         app.use('/', express.static(path.join(__dirname, 'bangkok')))
+        
+//         app.get('*', (req,res) => {
+//             res.sendFile(path.resolve(__dirname, 'bangkok', 'index.html'))
+//         })
+//     }
+
+//     else {
+//         app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+//         app.get('*', (req,res) => {
+//             res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+//         })
+//     }    
+// }
+
 if (process.env.NODE_ENV === 'production') {
 
-    if (req.headers.host === 'jadoo.andrey-kor.ru') {
-        app.use('/', express.static(path.join(__dirname, 'jadoo')))
-        
-        app.get('*', (req,res) => {
-            res.sendFile(path.resolve(__dirname, 'jadoo', 'index.html'))
-        })
-    }
+    app.use('/', (req,res) => {
+        if (req.headers.host === 'jadoo.andrey-kor.ru') {
+            express.static(path.join(__dirname, 'jadoo'))
 
-    else if (req.headers.host === 'bangkok.andrey-kor.ru') {
-        app.use('/', express.static(path.join(__dirname, 'bangkok')))
-        
-        app.get('*', (req,res) => {
-            res.sendFile(path.resolve(__dirname, 'bangkok', 'index.html'))
-        })
-    }
+            app.get('*', (req,res) => {
+                res.sendFile(path.resolve(__dirname, 'jadoo', 'index.html'))
+            })
 
-    else {
-        app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+            return
+        }
+        else if (req.headers.host === 'bangkok.andrey-kor.ru') {
+            express.static(path.join(__dirname, 'bangkok'))
 
-        app.get('*', (req,res) => {
-            res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-        })
-    }    
+            app.get('*', (req,res) => {
+                res.sendFile(path.resolve(__dirname, 'bangkok', 'index.html'))
+            })
+
+            return
+        }
+    })
+    
+    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+    app.get('*', (req,res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
 }
+
 
 const PORT = config.get('port') || 5000
 
