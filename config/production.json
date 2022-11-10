@@ -1,5 +1,5 @@
 {
-    "port": 5000,
+    "port": 80,
     "mongoUri": "mongodb+srv://Andrey:qAs6QfiW4le5SzBq@cluster0.eyjjoai.mongodb.net/?retryWrites=true&w=majority",
     "baseUrl": "http://andrey-kor.ru"
 }

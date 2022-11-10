@@ -5,7 +5,6 @@ import { AboutPage } from './pages/AboutPage'
 import { ArticlesPage } from './pages/ArticlesPage'
 import { ProjectsPage } from './pages/ProjectsPage'
 import { ErrorPage } from './pages/ErrorPage'
-import { useLocate } from './hooks/useLocate'
 
 export const useRoutes = () => {
     return (
