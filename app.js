@@ -12,14 +12,13 @@ app.use('/api/articles', require('./routes/article.routes'))
 if (process.env.NODE_ENV === 'production') {
 
     app.use(vhost('jadoo.andrey-kor.ru', require('./routes/jadoo.router')))
-    
     app.use(vhost('bangkok.andrey-kor.ru', require('./routes/bangkok.router')))
+    app.use(vhost('glp.andrey-kor.ru', require('./routes/glp.router')))
 
     app.use('/', express.static(path.join(__dirname, 'client', 'build')))
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     })
-    
 }
 
 const PORT = config.get('port') || 5000

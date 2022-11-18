@@ -34,6 +34,39 @@
     },
     {
         "id": 1,
+        "name": "Монитор отслеживания заказов",
+        "mainImage": "glp.png",
+        "alt": "GLP image",
+        "video": "glp.mp4",
+        "folder": "glp",
+        "gitLink": "https://github.com/andrey-kor/glp",
+        "projectLink": "http://glp.andrey-kor.ru",
+        "features": [
+            {
+                "image": "glp-ico-1.png",
+                "text": "Фильтрация по ключевым словам;"
+            },
+            {
+                "image": "glp-ico-2.png",
+                "text": "Фильтрация по ближайшим датам;"
+            },
+            {
+                "image": "glp-ico-3.png",
+                "text": "Фильтрация по диапазону дат;"
+            },
+            {
+                "image": "glp-ico-4.png",
+                "text": "Фильтры применяются совместно, показывая общий результат;"
+            },
+            {
+                "image": "glp-ico-5.png",
+                "text": "Проект намеренно написан без подключения сторонних библиотек (например, для выбора диапазона дат);"
+            }
+        ],
+        "tools": ["Vue.js", "HTML", "CSS"]
+    },
+    {
+        "id": 2,
         "name": "Одностраничный сайт путешествий",
         "mainImage": "jadoo.png",
         "alt": "JADOO image",
